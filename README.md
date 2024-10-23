@@ -1,4 +1,4 @@
-# filecompress
+# File Compression using Huffmann Tree Implementation
 
 # Huffman Coding Implementation (C++)
 
