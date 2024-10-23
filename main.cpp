@@ -28,7 +28,7 @@ private:
         }
     };
 
-    string path;
+    string path;  // Ensure 'path' is initialized
     unordered_map<char, string> codes;
     unordered_map<string, char> reverseMapping;
     priority_queue<HeapNode*, vector<HeapNode*>, compare> minHeap;
@@ -141,8 +141,8 @@ private:
     }
 
 public:
-    HuffmanCoding(string path) {
-        this->path = path;
+    HuffmanCoding(string filePath) {
+        path = filePath;  // Properly initialize the path variable
     }
 
     // Compress the file
@@ -206,7 +206,7 @@ public:
 };
 
 int main() {
-    string filePath = "input.txt"; // Specify your file path here
+    string filePath = "sample.txt"; // Specify your file path here
     HuffmanCoding huffman(filePath);
 
     string compressedFilePath = huffman.compress();
